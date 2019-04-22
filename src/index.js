@@ -19,6 +19,7 @@ import DetailPage from './components/DetailPage'
 import HelloPage from './components/HelloPage'
 import SubscribePage from './components/SubscribePage'
 import ThanksPage from './components/ThanksPage'
+import Anime from 'react-anime';
 // import Hero from './components/Hero';
 
 import 'tachyons'
@@ -79,10 +80,12 @@ ReactDOM.render(
             <Route path="/post/:id" component={DetailPage} />
           </Switch>
             
+        {/* <Anime scale={[1, 1]} direction={"reverse"} width={'3%'} easing={"easeOutQuad"} loop={true}> */}
+        <div className="rs-icon">
+          <a className="rs-github" href="https://github.com/arcaneflorist" target="_blank" style={{textDecoration: "none"}}><div className="sec"><i style={{fontSize: '24px'}} class="fab fa-github-alt"></i> </div></a>
+        </div>
+        {/* </Anime> */}
         
-        <footer className="footer">
-          <a className="rs-github" href="https://github.com/arcaneflorist" target="_blank" style={{textDecoration: "none"}}><div className="sec"><i class="fab fa-github-alt"></i>  arcaneflorist</div></a>
-        </footer>
         </div>    
       </Fragment>
     </Router>

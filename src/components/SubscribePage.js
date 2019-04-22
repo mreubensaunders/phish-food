@@ -6,11 +6,15 @@ import { DRAFTS_QUERY } from './DraftsPage'
 
 class SubscripePage extends Component {
   state = {
-    email: ''    
+    email: null,
+    content: null,
+    focus1: 'b--black-10',
+    focus2: 'b--black-10'
   }
 
   render() {
     return (
+        <div style={{backgroundColor: 'orange'}}>
       <Mutation
         mutation={SUBSCRIPTION_MUTATION}
         update={(cache, { data }) => {
@@ -27,30 +31,47 @@ class SubscripePage extends Component {
               <form
                 onSubmit={async e => {
                   e.preventDefault()
-                  const { email } = this.state
+                  const { email, content } = this.state                  
                   await createSub({
-                    variables: { email },
+                    variables: { email, content },
                   })
                   this.props.history.replace('/thanks')
                 }}
               >
-                <h1>Enter your email address!</h1>
+                <div className="tc pv4 pv5-ns">
+              <div className="ttu tracked">
+                     Drop me a line   _<i class="fas fa-feather"></i>
+              </div>
+              
+                </div>  
                 <input
                   autoFocus
-                  className="w-100 pa2 mv2 br2 b--black-20 bw1"
+                  className={`w-100 mv2 br1 pa3 ${this.state.focus1} bw1`}
                   onChange={e => this.setState({ email: e.target.value })}
-                  placeholder="email address"
+                  onFocus={e => this.setState({ focus1: 'b--black-20' })}
+                  onBlur={e => this.setState({ focus1: 'b--black-10' })}
+                  placeholder="your email address"
                   type="text"
                   value={this.state.email}
                 />            
-                <input
-                  className={`pa3 bg-black-10 bn ${this.state.email &&                    
-                    'dim pointer'}`}
-                  disabled={!this.state.email}
-                  type="submit"
-                  value="Create"
+                <textarea
+                  className={`db w-100 ba bw1 ${this.state.focus2} br1 pa3 mb2`}
+                  cols={50} 
+                  onChange={e => this.setState({ content: e.target.value})}
+                  onFocus={e => this.setState({ focus2: 'b--black-20' })}
+                  onBlur={e => this.setState({ focus2: 'b--black-10' })}                  
+                  placeholder="message..."
+                  rows={8}
+                  value={this.state.content}
                 />
-                <a className="f6 pointer" onClick={this.props.history.goBack}>
+                <input
+                  className={`pa3 bg-black-10 bn ${this.state.email && this.state.content &&                    
+                    'dim pointer'}`}
+                  disabled={!this.state.email && !this.state.content}
+                  type="submit"
+                  value="send"
+                />
+                <a className="f7 pa3 pointer cancel" onClick={this.props.history.goBack}>
                   or cancel
                 </a>
               </form>
@@ -58,16 +79,18 @@ class SubscripePage extends Component {
           )
         }}
       </Mutation>
+      </div>
     )
   }
 
 }
 
 const SUBSCRIPTION_MUTATION = gql`
-  mutation CreateSubsriptionMutation($email: String!) {
-    createSub(email: $email) {
+  mutation CreateSubsriptionMutation($email: String!, $content: String!) {
+    createSub(email: $email, content: $content) {
       id
-      email
+      email      
+      content
     }
   }
 `
@@ -77,6 +100,7 @@ const SUB_QUERY = gql`
     subs {
       id
       email
+      content
     }
   }
 `

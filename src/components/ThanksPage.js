@@ -11,7 +11,7 @@ export default class ThanksPage extends Component {
   }
 
   componentDidMount() {
-    this.id = setTimeout(() => this.setState({ redirect: true }), 1800)
+    this.id = setTimeout(() => this.setState({ redirect: true }), 1600)
   }
 
   componentWillUnmount() {
@@ -25,8 +25,9 @@ export default class ThanksPage extends Component {
       <Anime opacity={[0, 1]} translateY={'1em'} delay={(e, i) => i * 1000}>
       <div className="tc pv4 pv5-ns">
               <div className="ttu tracked">
-                     Thanks for subscribing!       
+              <p style={{color: '#ff80cc'}}>Message sent <i class="far fa-paper-plane"></i>  </p>
               </div>
+              
             </div>    
         </Anime>
         

@@ -89,10 +89,14 @@ body .push {
   height: 10vh;
 }
 
-body footer {
+body .cancel:hover {
+  color: #ff80cc !important;
+}
+
+body .rs-icon {
   margin: 0;
   position: fixed;
-  bottom: 0;
+  top: 0;
   right: 0;
   color: black;
   letter-spacing: 0.2em;
@@ -101,16 +105,26 @@ body footer {
   font-size: 12px;
 }
 
-body footer:hover {
+body .rs-icon .rs-github {
+  text-decoration: none !important;
+}
+
+body .rs-icon .rs-github:hover {
   background-color: #ff80cc;
   color: white !important;
 }
 
-body footer .rs-github {
+body .rs-icon .rs-medium {
   text-decoration: none !important;
+  background-color: red !important;
 }
 
-body footer .sec {
+body .rs-icon .rs-medium:hover {
+  background-color: blue;
+  color: white !important;
+}
+
+body .rs-icon .sec {
   padding: 1em 1em 1em 1em;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -123,7 +137,7 @@ body footer .sec {
   color: black;
 }
 
-body footer .sec:hover {
+body .rs-icon .sec:hover {
   -webkit-transition: 30ms;
   transition: 30ms;
   background-color: #ff80cc;

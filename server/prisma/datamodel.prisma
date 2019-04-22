@@ -11,6 +11,7 @@ type Post {
 type Sub {
   id: ID! @id  
   email: String!
+  content: String!
 }
 
 type Airdrop {

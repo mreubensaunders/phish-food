@@ -259,6 +259,8 @@ export type SubOrderByInput =
   | "id_DESC"
   | "email_ASC"
   | "email_DESC"
+  | "content_ASC"
+  | "content_DESC"
   | "createdAt_ASC"
   | "createdAt_DESC"
   | "updatedAt_ASC"
@@ -348,6 +350,7 @@ export interface AirdropUpdateManyDataInput {
 
 export interface SubUpdateManyMutationInput {
   email?: String;
+  content?: String;
 }
 
 export interface AirdropUpdateManyWithWhereNestedInput {
@@ -357,6 +360,7 @@ export interface AirdropUpdateManyWithWhereNestedInput {
 
 export interface SubUpdateInput {
   email?: String;
+  content?: String;
 }
 
 export interface AirdropWhereInput {
@@ -412,6 +416,7 @@ export interface AirdropWhereInput {
 
 export interface SubCreateInput {
   email: String;
+  content: String;
 }
 
 export interface AirdropUpsertWithWhereUniqueWithoutAuthorInput {
@@ -453,6 +458,20 @@ export interface SubWhereInput {
   email_not_starts_with?: String;
   email_ends_with?: String;
   email_not_ends_with?: String;
+  content?: String;
+  content_not?: String;
+  content_in?: String[] | String;
+  content_not_in?: String[] | String;
+  content_lt?: String;
+  content_lte?: String;
+  content_gt?: String;
+  content_gte?: String;
+  content_contains?: String;
+  content_not_contains?: String;
+  content_starts_with?: String;
+  content_not_starts_with?: String;
+  content_ends_with?: String;
+  content_not_ends_with?: String;
   AND?: SubWhereInput[] | SubWhereInput;
   OR?: SubWhereInput[] | SubWhereInput;
   NOT?: SubWhereInput[] | SubWhereInput;
@@ -1016,11 +1035,13 @@ export interface AirdropSubscription
 export interface Sub {
   id: ID_Output;
   email: String;
+  content: String;
 }
 
 export interface SubPromise extends Promise<Sub>, Fragmentable {
   id: () => Promise<ID_Output>;
   email: () => Promise<String>;
+  content: () => Promise<String>;
 }
 
 export interface SubSubscription
@@ -1028,6 +1049,7 @@ export interface SubSubscription
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   email: () => Promise<AsyncIterator<String>>;
+  content: () => Promise<AsyncIterator<String>>;
 }
 
 export interface AirdropSubscriptionPayload {
@@ -1079,6 +1101,7 @@ export interface UserSubscriptionPayloadSubscription
 export interface SubPreviousValues {
   id: ID_Output;
   email: String;
+  content: String;
 }
 
 export interface SubPreviousValuesPromise
@@ -1086,6 +1109,7 @@ export interface SubPreviousValuesPromise
     Fragmentable {
   id: () => Promise<ID_Output>;
   email: () => Promise<String>;
+  content: () => Promise<String>;
 }
 
 export interface SubPreviousValuesSubscription
@@ -1093,6 +1117,7 @@ export interface SubPreviousValuesSubscription
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   email: () => Promise<AsyncIterator<String>>;
+  content: () => Promise<AsyncIterator<String>>;
 }
 
 export interface PostPreviousValues {

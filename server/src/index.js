@@ -31,9 +31,10 @@ const resolvers = {
         content,
       })
     },
-    createSub(parent, { email }, context) {
+    createSub(parent, { email, content }, context) {
       return context.prisma.createSub({
-        email        
+        email,
+        content,
       })
     },
     deletePost(parent, { id }, context) {

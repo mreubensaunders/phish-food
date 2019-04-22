@@ -469,6 +469,7 @@ type Query {
 type Sub {
   id: ID!
   email: String!
+  content: String!
 }
 
 type SubConnection {
@@ -479,6 +480,7 @@ type SubConnection {
 
 input SubCreateInput {
   email: String!
+  content: String!
 }
 
 type SubEdge {
@@ -491,6 +493,8 @@ enum SubOrderByInput {
   id_DESC
   email_ASC
   email_DESC
+  content_ASC
+  content_DESC
   createdAt_ASC
   createdAt_DESC
   updatedAt_ASC
@@ -500,6 +504,7 @@ enum SubOrderByInput {
 type SubPreviousValues {
   id: ID!
   email: String!
+  content: String!
 }
 
 type Subscription {
@@ -529,10 +534,12 @@ input SubSubscriptionWhereInput {
 
 input SubUpdateInput {
   email: String
+  content: String
 }
 
 input SubUpdateManyMutationInput {
   email: String
+  content: String
 }
 
 input SubWhereInput {
@@ -564,6 +571,20 @@ input SubWhereInput {
   email_not_starts_with: String
   email_ends_with: String
   email_not_ends_with: String
+  content: String
+  content_not: String
+  content_in: [String!]
+  content_not_in: [String!]
+  content_lt: String
+  content_lte: String
+  content_gt: String
+  content_gte: String
+  content_contains: String
+  content_not_contains: String
+  content_starts_with: String
+  content_not_starts_with: String
+  content_ends_with: String
+  content_not_ends_with: String
   AND: [SubWhereInput!]
   OR: [SubWhereInput!]
   NOT: [SubWhereInput!]

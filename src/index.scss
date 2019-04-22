@@ -82,24 +82,39 @@ body {
   height: 10vh;  
 }
 
-footer{
+  .cancel{    
+    &:hover{
+      
+      color: $primary !important;
+    }
+  }
+
+
+.rs-icon{
   margin: 0;  
-  position: fixed;
-  
-  bottom: 0;
+  position: fixed;  
+  top: 0;
   right: 0;
   color: black;
   letter-spacing: 0.2em;
   background-color: $seconday;
   display: block;
   font-size: 12px;  
-  &:hover{
-    background-color: $primary;
-    color: white !important;
-  }
+  
   .rs-github{
     text-decoration: none !important;
-    
+    &:hover{
+      background-color: $primary;
+      color: white !important;
+    }
+  }
+  .rs-medium{
+    text-decoration: none !important;
+    background-color: red !important;
+    &:hover{
+      background-color: blue;
+      color: white !important;
+    }
   }
   .sec{    
     padding: 1em 1em 1em 1em;
