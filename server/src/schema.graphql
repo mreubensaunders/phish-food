@@ -1,0 +1,41 @@
+type Query {
+  feed: [Post!]!
+  airdrops: [Airdrop!]
+  subs: [Sub!]
+  drafts: [Post!]!
+  post(id: ID!): Post
+}
+
+type Mutation {
+  createDraft(title: String!, content: String): Post
+  createAirdrop(name: String!): Airdrop
+  createSub(email: String!): Sub
+  deletePost(id: ID!): Post
+  publish(id: ID!): Post
+  like(id: ID!, count: Int): Post
+}
+
+type Sub {
+  id: ID!  
+  email: String!
+}
+
+type Post {
+  id: ID!
+  published: Boolean!
+  title: String!
+  content: String!
+  likes: Int
+}
+
+type Airdrop {
+  id: ID!
+  name: String!    
+  author: User
+}
+
+type User {
+  id: ID!
+  name: String!
+  outgoingAirdrops: [Airdrop]
+}

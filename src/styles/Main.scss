@@ -1,0 +1,134 @@
+// @import 'https://fonts.googleapis.com/css?family=Open+Sans:300, 400';
+
+$paper: rgb(255, 189, 189) !important;
+
+body {
+    margin: 0;    
+//    background-color: $paper;
+    color: white !important;
+  
+    .hero-container{
+        display: block;
+        height: 30vh;
+        .hero{
+            margin: 5% 20% 5% 20%;            
+            display: flex;
+            position: relative;
+            max-width: 60%;            
+            background-color:black;        
+            color: yellow;
+            padding: 2em;    
+            height: 100%;
+            .info{
+                padding: 1em 2em 1em 1em;
+                align-items: center;
+                margin: 0;
+                position: relative;                            
+                display: flex;
+                
+                height: 50%;
+                h1{
+                    color: white;
+                    margin: 0;
+                    text-align: left;
+                    font-size: 32px !important;
+                    padding: 0.2em 0.2em 0.2em 0.2em;
+                    width: 100%;
+                }
+                h3{
+                    padding-top: 1em;                    
+                    margin: 0;                    
+                    letter-spacing: 0.4em;
+                    text-align: justify;
+                    font-size: 12px;
+                    font-family: 'IBM Plex Mono', monospace !important;
+                }
+            }
+            .footer-container{
+                position: absolute;
+                display: inline;
+                bottom: 0;
+                .rs-github{
+                  text-decoration: none !important;
+                  &:hover{
+                    background-color: $paper;
+                  }
+                }
+                .footer{
+                    padding: 2em;                    
+                    letter-spacing: 0.8em;
+                    position: relative;                                        
+                    color: red;                                        
+                    &:hover{
+                        transition: ease 200ms;
+                        background-color: black;
+                        color: blue;
+                        cursor: pointer;
+                    }                    
+                }
+            }
+        }
+    }
+    .feed-container{
+        display: inline;              
+        .feed{
+            margin: 5% 20% 5% 20%;            
+            display: flex;
+            position: relative;
+            max-width: 60%;            
+            background-color:blue;        
+            color: $paper;
+            padding: 2em;    
+            height: 100%;
+            
+.post {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    height: 350px;
+    flex: 0 0 350px;
+  }
+  
+  .post .description {
+    flex: 1;
+    padding-left: 25px;
+    font-size: 25px;
+  }
+  
+  .detail {
+    width: 600px;
+    height: 600px;
+    flex: 0 0 600px;
+  }
+  
+  .detail .description {
+    flex: 1;
+    padding-left: 40px;
+    font-size: 38px;
+  }
+  
+  .title {
+    font-size: 42px;
+  }
+  
+  .content {
+    font-size: 18px;
+  }
+  
+  .new-post {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  
+  .close {
+    opacity: 0.5;
+    margin-top: 60px;
+    margin-right: 60px;
+  }
+  
+  .close img {
+    width: 20px;
+    height: 20px;
+  }
+  
+        }
+    }
+}

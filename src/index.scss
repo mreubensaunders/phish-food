@@ -1,0 +1,202 @@
+/*@import 'https://fonts.googleapis.com/css?family=Open+Sans:300, 400';*/
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,400,700|Rubik');
+$light: rgb(206, 206, 206);
+$primary: #ff80cc;
+$seconday: aquamarine;
+
+// font-family: 'IBM Plex Sans', sans-serif;
+// font-family: 'Rubik', sans-serif;
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+
+  background:white;/*rgba(0, 0, 0, 0.05);*/  
+  h1{
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 400;     
+      margin-bottom: 0;       
+  }
+  .rs-subscribe{
+    background-color: $primary;
+    color: $seconday;
+  }
+
+  .dash-dash{
+      padding: 22px;
+      background-color: orange !important;
+      border-radius: 2em;
+      color: white;
+      font-size: 14px;
+  }
+
+
+  .post-min{
+    display: flex;
+    .content{      
+      min-width: 20%;
+    }
+    .like-container{
+      text-align: center;
+    .like{
+      display: block;
+      border: 1px solid $light;
+      width: 1.5em; 
+      width: auto;     
+      border-radius: 0.2em;    
+      align-self: flex-start;
+      margin: 2em 1em 0em 0em;
+      padding: 0.4em;      
+      border-color: $light;
+      &:hover{
+        cursor: pointer;
+        background-color: $primary;
+        border-color: $primary;
+        transition: ease 200ms;
+        i{
+          color: white;
+          transition: ease 200ms;
+        }
+      }
+      i{        
+        color: $light;
+        font-weight: 100;
+        text-align: center;        
+      }
+    }
+    .like-count{      
+      display: block;      
+      width: 1.5em; 
+      width: auto;           
+      align-self: flex-end;
+      margin: 1vh 1em 2em 0em;
+      padding: 0.4em;      
+      color: $light;
+    }
+  }
+  }
+  
+.push{
+  height: 10vh;  
+}
+
+footer{
+  margin: 0;  
+  position: fixed;
+  
+  bottom: 0;
+  right: 0;
+  color: black;
+  letter-spacing: 0.2em;
+  background-color: $seconday;
+  display: block;
+  font-size: 12px;  
+  &:hover{
+    background-color: $primary;
+    color: white !important;
+  }
+  .rs-github{
+    text-decoration: none !important;
+    
+  }
+  .sec{    
+    padding: 1em 1em 1em 1em;
+    align-items: center;
+    margin: 0;        
+    position: relative;                            
+    display: flex;
+    color: black;
+    &:hover{
+      transition: 30ms;
+      background-color: $primary;
+      color: white !important;
+    }
+  }
+}
+}
+
+.stick{
+  position: fixed;
+  margin: 0.2em 0.2em 0.2em 0.2em;  
+}
+
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h2{
+  font-size: 20px;
+}
+
+h3{
+  font-family: 'Rubik', sans-serif;
+}
+
+p{
+  font-size: 18px;
+}
+
+.rs-pink{
+  color: rgb(51, 51, 51);
+  font-size: 42px;
+  
+}
+
+.post {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  height: 350px;
+  flex: 0 0 350px;
+}
+
+.post .description {
+  flex: 1;
+  padding-left: 25px;
+  font-size: 25px;
+}
+
+.detail {
+  width: 600px;
+  height: 600px;
+  flex: 0 0 600px;
+}
+
+.detail .description {
+  flex: 1;
+  padding-left: 40px;
+  font-size: 38px;
+}
+
+.title {
+  font-size: 42px;
+}
+
+.content {
+  font-size: 16px;
+}
+
+.new-post {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.close {
+  opacity: 0.5;
+  margin-top: 60px;
+  margin-right: 60px;
+}
+
+.close img {
+  width: 20px;
+  height: 20px;
+}
