@@ -3,6 +3,7 @@ import Post from './Post'
 import { Query } from 'react-apollo'
 import  { gql } from 'apollo-boost'
 // import subscribeStyle from '../constants/subscribeStyle';
+
 import {
   NavLink,
   Link,
@@ -48,12 +49,15 @@ const _Hero = () => (
             className="dash-dash link dim f6 f5-ns dib black"
             activeClassName="pink"
             exact={true}
-            to="/Subscribe"
+            to="/subscribe"
             title="Subscribe"
           >
             Contact Me
-          </NavLink>                    
-              </div>
+          </NavLink>                  
+              </div>   
+              
+              
+              
             </div>    
                
           </div>   

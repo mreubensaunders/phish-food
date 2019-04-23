@@ -40,7 +40,7 @@ class SubscripePage extends Component {
               >
                 <div className="tc pv4 pv5-ns">
               <div className="ttu tracked">
-              私に書く _<i class="fas fa-feather"></i>
+              drop me a line _<i class="fas fa-feather"></i>
               </div>
               
                 </div>  
@@ -50,7 +50,7 @@ class SubscripePage extends Component {
                   onChange={e => this.setState({ email: e.target.value })}
                   onFocus={e => this.setState({ focus1: 'b--black-20' })}
                   onBlur={e => this.setState({ focus1: 'b--black-10' })}
-                  placeholder="電子メールアドレス"
+                  placeholder="your email address"
                   type="text"
                   value={this.state.email}
                 />            
@@ -60,7 +60,7 @@ class SubscripePage extends Component {
                   onChange={e => this.setState({ content: e.target.value})}
                   onFocus={e => this.setState({ focus2: 'b--black-20' })}
                   onBlur={e => this.setState({ focus2: 'b--black-10' })}                  
-                  placeholder="メッセージ..."
+                  placeholder="message..."
                   rows={8}
                   value={this.state.content}
                 />
@@ -69,7 +69,7 @@ class SubscripePage extends Component {
                     'dim pointer'}`}
                   disabled={!this.state.email && !this.state.content}
                   type="submit"
-                  value="送る"
+                  value="send"
                 />
                 <a className="f7 pa3 pointer cancel" onClick={this.props.history.goBack}>
                   or cancel

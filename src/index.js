@@ -19,6 +19,7 @@ import DetailPage from './components/DetailPage'
 import HelloPage from './components/HelloPage'
 import SubscribePage from './components/SubscribePage'
 import ThanksPage from './components/ThanksPage'
+import StackPage from './components/StackPage';
 import Anime from 'react-anime';
 // import Hero from './components/Hero';
 
@@ -46,11 +47,20 @@ ReactDOM.render(
             className="link dim f6 f5-ns dib mr3 black"
             activeClassName="pink"
             exact={true}
-            to="/Feed"
+            to="/feed"
             title="Feed"
           >
             Feed
           </NavLink>         
+          <NavLink
+          className="link dim f6 f5-ns dib mr3 black"
+          activeClassName="pink"
+          exact={true}
+          to="/stack"
+          title="Stack"
+        >
+          Stack
+        </NavLink>    
           {/* <NavLink
             className="link dim f6 f5-ns dib mr3 black"
             activeClassName="pink"
@@ -75,6 +85,7 @@ ReactDOM.render(
             <Route path="/drafts" component={DraftsPage} />
             <Route path="/create" component={CreatePage} />
             <Route path="/airdrop" component={CreateAirdrop} />
+            <Route path="/stack" component={StackPage} />
             <Route path="/thanks" component={ThanksPage} />
             <Route path="/subscribe" component={SubscribePage} />
             <Route path="/post/:id" component={DetailPage} />
