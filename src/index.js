@@ -19,6 +19,7 @@ import DetailPage from './components/DetailPage'
 import HelloPage from './components/HelloPage'
 import SubscribePage from './components/SubscribePage'
 import ThanksPage from './components/ThanksPage'
+import NotFoundPage from './components/NotFoundPage'
 import StackPage from './components/StackPage';
 import Anime from 'react-anime';
 // import Hero from './components/Hero';
@@ -89,6 +90,7 @@ ReactDOM.render(
             <Route path="/thanks" component={ThanksPage} />
             <Route path="/subscribe" component={SubscribePage} />
             <Route path="/post/:id" component={DetailPage} />
+            <Route component={NotFoundPage} />
           </Switch>
             
         {/* <Anime scale={[1, 1]} direction={"reverse"} width={'3%'} easing={"easeOutQuad"} loop={true}> */}
