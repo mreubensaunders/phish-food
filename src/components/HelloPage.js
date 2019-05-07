@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import Post from './Post'
 import { Query } from 'react-apollo'
 import  { gql } from 'apollo-boost'
+// import RewardPage from './RewardPage';
 // import subscribeStyle from '../constants/subscribeStyle';
 
 import {
@@ -30,8 +31,8 @@ const Hero = () => (
 const _Hero = () => (
   <header class="tc pv4 pv5-ns">
     <img src={_img} class="br3 ba b--black-10 h4 w4" alt="avatar"></img>
-    <h1 class="f5 f4-ns fw6 black-70">arcane florist</h1>
-    <h2 class="f6 black-70 fw2 ttu tracked">Tokyo 2 <p style={{color: '#ff80cc'}}>{'{ React, Vue, GraphQL, Aws }'}</p></h2>
+    <h1 class="f5 f4-ns fw6 black-70">Hugggee nerd</h1>
+    <h2 class="f6 black-70 fw2 ttu tracked">Tokyo III <p style={{color: '#ff80cc'}}>{'{ React, .NET, GraphQL, Aws }'}</p></h2>
   </header>
 );
 
