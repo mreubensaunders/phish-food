@@ -28,7 +28,7 @@ import 'tachyons'
 import './index.css'
 import CreateAirdrop from './components/CreateAirdrop';
 
-const client = new ApolloClient({ uri: 'http://localhost:4000' })
+const client = new ApolloClient({ uri: 'https://phish-food-server.herokuapp.com' })
 
 ReactDOM.render(
   <ApolloProvider client={client}>
