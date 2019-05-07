@@ -16,7 +16,7 @@ import {
 import img from '../assets/ME5.png';
 import _img from '../assets/smug.png';
 
-const arcane = false; //dfdsfsd
+const arcane = true; //dfdsfsd
 
 //https://66.media.tumblr.com/a4df63bf7f9fd8aa2eae34be6a4ce8e2/tumblr_odd74xENUC1tc5gvpo1_250.png
 

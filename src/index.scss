@@ -4,14 +4,51 @@ $light: rgb(206, 206, 206);
 $primary: #ff80cc;
 $seconday: aquamarine;
 
+$eva1: #6441f7; 
+$eva2: #00de72;
+
 // font-family: 'IBM Plex Sans', sans-serif;
 // font-family: 'Rubik', sans-serif;
-
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Rubik', sans-serif;
+
+  .rwd-container{
+    width: 100%;
+    min-height: 2em;    
+    padding-top: 8em;
+    padding-bottom: 8em;
+    padding-left: 2em;
+    // section{
+    //   display: flex;
+    //   min-height: 10hv;
+    //   width: 100%;
+    // }
+    input{
+      color: pink;
+      padding: 1em;
+      border: none;      
+    }
+  }
+   
+ 
+  .rwd-purple{
+    background-color: $eva1;
+    color: white;
+  }
+  .rwd-green{
+    color: $eva2;
+  }
+  .input-sm{      
+    
+  }
+  .rwd-icon{
+    padding: 1.6em;
+    font-size: 18px;
+  }
+
 
   background:white;/*rgba(0, 0, 0, 0.05);*/  
   h1{
@@ -31,7 +68,6 @@ body {
       color: white;
       font-size: 14px;
   }
-
 
   .post-min{
     display: flex;

@@ -8,6 +8,34 @@ body {
   /*rgba(0, 0, 0, 0.05);*/
 }
 
+body .rwd-container {
+  width: 100%;
+  min-height: 2em;
+  padding-top: 8em;
+  padding-bottom: 8em;
+  padding-left: 2em;
+}
+
+body .rwd-container input {
+  color: pink;
+  padding: 1em;
+  border: none;
+}
+
+body .rwd-purple {
+  background-color: #6441f7;
+  color: white;
+}
+
+body .rwd-green {
+  color: #00de72;
+}
+
+body .rwd-icon {
+  padding: 1.6em;
+  font-size: 18px;
+}
+
 body h1 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;

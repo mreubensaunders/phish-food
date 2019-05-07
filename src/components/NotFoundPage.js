@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component, Fragment, useState } from 'react'
 import {
   Redirect
 } from 'react-router-dom'
 import Anime from 'react-anime';
 
-export default class NotFoundPage extends Component {
+export default class NotFoundPage extends Component {  
 
   state = {
     redirect: false
