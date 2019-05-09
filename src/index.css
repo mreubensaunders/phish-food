@@ -8,34 +8,6 @@ body {
   /*rgba(0, 0, 0, 0.05);*/
 }
 
-body .rwd-container {
-  width: 100%;
-  min-height: 2em;
-  padding-top: 8em;
-  padding-bottom: 8em;
-  padding-left: 2em;
-}
-
-body .rwd-container input {
-  color: pink;
-  padding: 1em;
-  border: none;
-}
-
-body .rwd-purple {
-  background-color: #6441f7;
-  color: white;
-}
-
-body .rwd-green {
-  color: #00de72;
-}
-
-body .rwd-icon {
-  padding: 1.6em;
-  font-size: 18px;
-}
-
 body h1 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;
@@ -53,6 +25,42 @@ body .dash-dash {
   border-radius: 2em;
   color: white;
   font-size: 14px;
+}
+
+body .theme-switch {
+  color: orange;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #e7e7e7;
+  border-radius: 1em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .3em;
+}
+
+body .theme-switch .selector {
+  cursor: pointer;
+  border-radius: 1em;
+  margin: .2em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 10px;
+  width: 10px;
+  background-color: gray;
+}
+
+body .theme-switch .selector:hover {
+  -webkit-transition: 100ms ease-out;
+  transition: 100ms ease-out;
+  border: 1px solid #cecece;
+  background-color: rgba(255, 128, 204, 0.5) !important;
+}
+
+body .theme-switch .active-theme {
+  background-color: #ff80cc !important;
 }
 
 body .post-min {

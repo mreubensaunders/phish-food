@@ -4,51 +4,14 @@ $light: rgb(206, 206, 206);
 $primary: #ff80cc;
 $seconday: aquamarine;
 
-$eva1: #6441f7; 
-$eva2: #00de72;
-
 // font-family: 'IBM Plex Sans', sans-serif;
 // font-family: 'Rubik', sans-serif;
+
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Rubik', sans-serif;
-
-  .rwd-container{
-    width: 100%;
-    min-height: 2em;    
-    padding-top: 8em;
-    padding-bottom: 8em;
-    padding-left: 2em;
-    // section{
-    //   display: flex;
-    //   min-height: 10hv;
-    //   width: 100%;
-    // }
-    input{
-      color: pink;
-      padding: 1em;
-      border: none;      
-    }
-  }
-   
- 
-  .rwd-purple{
-    background-color: $eva1;
-    color: white;
-  }
-  .rwd-green{
-    color: $eva2;
-  }
-  .input-sm{      
-    
-  }
-  .rwd-icon{
-    padding: 1.6em;
-    font-size: 18px;
-  }
-
 
   background:white;/*rgba(0, 0, 0, 0.05);*/  
   h1{
@@ -67,6 +30,38 @@ body {
       border-radius: 2em;
       color: white;
       font-size: 14px;
+  }
+
+  .theme-switch{
+    color: orange;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 1em;
+    display: inline-flex;
+    padding: .3em;
+    //height: 2em;
+    .selector{
+      cursor: pointer;
+      border-radius: 1em;
+      //border: 1px solid rgb(218, 218, 218);
+      margin: .2em;
+      display: inline-flex;
+      height: 10px;
+      width: 10px;
+      background-color: gray;
+      
+      &:hover{
+        transition: 100ms ease-out;
+        border: 1px solid $light;
+        background-color: rgba($color: #ff80cc, $alpha: 0.5) !important;
+      }
+    }
+    .active-theme{
+      background-color: $primary !important;
+    }
+    
   }
 
   .post-min{

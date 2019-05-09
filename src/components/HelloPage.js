@@ -22,7 +22,7 @@ const arcane = false; //dfdsfsd
 
 const Hero = () => (
   <header class="tc pv4 pv5-ns">
-    <img src="https://media.giphy.com/media/TDMwAs1KQVQWI/giphy.gif" class="br3 ba b--black-10 h4 w4" alt="avatar"></img>
+    <img src={_img} class="br3 ba b--black-10 h4 w4" alt="avatar"></img>
     <h1 class="f5 f4-ns fw6 black-70">Michael Saunders</h1>
     <h2 class="f6 black-70 fw2 ttu tracked">Northampton, UK<p style={{color: '#ff80cc'}}>{'{ .NET, React, Vue, GraphQL, AWS }'}</p></h2>
   </header>

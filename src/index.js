@@ -22,11 +22,12 @@ import ThanksPage from './components/ThanksPage'
 import NotFoundPage from './components/NotFoundPage'
 import StackPage from './components/StackPage';
 import Anime from 'react-anime';
-// import Hero from './components/Hero';
+import Hero from './components/ThemeSwitch';
 
 import 'tachyons'
 import './index.css'
 import CreateAirdrop from './components/CreateAirdrop';
+import ThemeSwitch from './components/ThemeSwitch';
 
 const client = new ApolloClient({ uri: 'https://phish-food-server.herokuapp.com' })
 
@@ -99,7 +100,8 @@ ReactDOM.render(
         </div>
         {/* </Anime> */}
         
-        </div>    
+        </div> 
+        <ThemeSwitch></ThemeSwitch>   
       </Fragment>
     </Router>
   </ApolloProvider>,
