@@ -5,7 +5,7 @@ export const StateContext = createContext();
 //this delicious lil js file provides state for entire app
 //redux seemed like too much
 
-export const AppState = ({reducer, initialState, children}) =>(
+export const StateProvider = ({reducer, initialState, children}) =>(
     <StateContext.Provider value={useReducer(reducer, initialState)}>
       {children}
     </StateContext.Provider>

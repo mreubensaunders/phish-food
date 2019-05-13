@@ -23,18 +23,42 @@ import NotFoundPage from './components/NotFoundPage'
 import StackPage from './components/StackPage';
 import Anime from 'react-anime';
 import Hero from './components/ThemeSwitch';
+import {StateProvider, useStateValue} from './AppState';
 
 import 'tachyons'
 import './index.css'
+//import './dark.css'
+
+
 import CreateAirdrop from './components/CreateAirdrop';
 import ThemeSwitch from './components/ThemeSwitch';
 
 const client = new ApolloClient({ uri: 'https://phish-food-server.herokuapp.com' })
+//const [{ theme }] = useStateValue();
+
+const initialState = {
+  theme: { primary: 'white' }
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'changeTheme':
+      return {
+        ...state,
+        theme: action.newTheme
+      };
+      
+    default:
+      return state;
+  }
+};
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
+  
+  <StateProvider initialState={initialState} reducer={reducer}>  
+  <ApolloProvider client={client}>  
     <Router>
-      <Fragment>
+      <Fragment>      
         <nav className="pa3 pa4-ns">    
         <NavLink
             className="link dim f6 f5-ns dib mr3 black"
@@ -104,6 +128,7 @@ ReactDOM.render(
         <ThemeSwitch></ThemeSwitch>   
       </Fragment>
     </Router>
-  </ApolloProvider>,
+  </ApolloProvider>
+  </StateProvider>,
   document.getElementById('root'),
 )

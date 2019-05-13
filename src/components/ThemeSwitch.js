@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react';
+import { useStateValue  } from '../AppState';
 
-function ThemeSwitch(){
+function ThemeSwitch(){    
 
-    const LIGHT = "light";
-    const DARK = "dark";
-    const [theme, setTheme] = useState(LIGHT);
+    const LIGHT = "white";
+    const DARK = "black";
+    //const [theme, setTheme] = useState(LIGHT);
+    const [{ theme }, dispatch] = useStateValue();
+
 
     //today todo
     //make theme switcher
@@ -14,17 +17,20 @@ function ThemeSwitch(){
     //
     //
     useEffect(()=>{
-        console.log(theme);
-
+        console.log(theme);            
         //call reducer here or summin
     })
 
-
-    return(
-        
-        <div className="theme-switch">
-            <div className={theme === LIGHT ? 'selector active-theme' : 'selector'} onClick={() => {setTheme(LIGHT)}}></div>
-            <div className={theme === DARK ? 'selector active-theme' : 'selector'}  onClick={() => {setTheme(DARK)}}></div>
+    return(        
+        <div className="theme-switch">                
+            <div className={theme.primary === LIGHT ? 'selector active-theme' : 'selector'} onClick={() => dispatch({
+                type: 'changeTheme',
+                newTheme: { primary: LIGHT}
+              })}></div>
+            <div className={theme.primary === DARK ? 'selector active-theme' : 'selector'}  onClick={() => dispatch({
+                type: 'changeTheme',
+                newTheme: { primary: DARK}
+              })}></div>            
         </div>
     )
 }
