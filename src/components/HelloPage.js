@@ -12,6 +12,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom'
+import Anime from 'react-anime';
 
 import img from '../assets/ME7.png';
 import _img from '../assets/smug.png';
@@ -23,15 +24,19 @@ const arcane = false; //dfdsfsd
 
 const Hero = () => (
   <header class="tc pv4 pv5-ns">
+  <Anime opacity={[0, 1]} translateY={'-0.2em'} delay={(e, i) => i * 3000}>
     <img src={img} class="br3 ba b--black-10 h4 w4" alt="avatar"></img>
+    </Anime>
     <h1 class="f5 f4-ns fw6 black-70">Michael Saunders</h1>    
-    <h2 class="f6 black-70 fw2 ttu tracked">Northampton, UK<p style={{color: '#ff80cc'}}>{'{ .NET, React, GraphQL, AWS }'}</p></h2>
+    <h2 class="f6 black-70 fw2 ttu tracked">Northampton, UK<p style={{color: '#ff80cc', fontSize: 14}}>{'{ .NET, React, Vue, GraphQL, AWS }'}</p></h2>
   </header>
 );
 
 const _Hero = () => (  
   <header class="tc pv4 pv5-ns">
+  <Anime opacity={[0, 1]} translateY={'-0.2em'} delay={(e, i) => i * 3000}>
     <img src={_img} class="br3 ba b--black-10 h4 w4" alt="avatar"></img>
+    </Anime>
     <h1 class="f5 f4-ns fw6 black-70">arcaneflorist</h1>    
     <h2 class="f6 black-70 fw2 ttu tracked">Tokyo III <p style={{color: '#ff80cc'}}>{'{ cobwebs && magic }'}</p></h2>
   </header>
