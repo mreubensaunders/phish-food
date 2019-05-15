@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import Post from './Post'
 import { Query } from 'react-apollo'
 import  { gql } from 'apollo-boost'
+import Loading from './Loading'
 // import RewardPage from './RewardPage';
 // import subscribeStyle from '../constants/subscribeStyle';
 
@@ -51,7 +52,9 @@ export default function HelloPage() {
             {theme.primary === "black" ? <_Hero/> :
             <Hero/>            
             }            
+            
             <div className="tc pv4 pv3-ns">
+            <Loading></Loading>
               <div className="ttu tracked">
               <NavLink
               
