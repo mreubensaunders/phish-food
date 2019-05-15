@@ -53,8 +53,7 @@ export default function HelloPage() {
             <Hero/>            
             }            
             
-            <div className="tc pv4 pv3-ns">
-            <Loading></Loading>
+            <div className="tc pv4 pv3-ns">            
               <div className="ttu tracked">
               <NavLink
               

@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import Post from '../components/Post'
 import { Query } from 'react-apollo'
 import  { gql } from 'apollo-boost'
+import Loading from './Loading'
 
 export default class FeedPage extends Component {
   render() {
@@ -11,7 +12,8 @@ export default class FeedPage extends Component {
           if (loading) {
             return (
               <div className="flex w-100 h-100 items-center justify-center pt7">
-                <div>Loading ...</div>
+                {/* <div>Loading ...</div>  */}
+                <Loading/>
               </div>
             )
           }//<---MAKE THIS AND (ERROR) INTO COMPONENTS
