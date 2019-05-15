@@ -78,7 +78,7 @@ ReactDOM.render(
           >
             Feed
           </NavLink>         
-          <NavLink
+          {/* <NavLink
           className="link dim f6 f5-ns dib mr3 black"
           activeClassName="pink"
           exact={true}
@@ -86,7 +86,7 @@ ReactDOM.render(
           title="Stack"
         >
           Stack
-        </NavLink>    
+        </NavLink>     */}
           {/* <NavLink
             className="link dim f6 f5-ns dib mr3 black"
             activeClassName="pink"
