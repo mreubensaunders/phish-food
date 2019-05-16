@@ -13,7 +13,7 @@ export default function Loading() {
             <Anime rotate={360} duration={1000} loop={true} easing={'easeInOutExpo'}>
                 <i class="fas fa-circle-notch"></i>
             </Anime>
-            <p className="black-50 fs-">This server can take a minute to wake up</p>            
+             {/*<p className="black-50 fs-">server is waking up Σ(￣。￣ノ)</p>*/}
         </div>
     )
 }

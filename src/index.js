@@ -20,6 +20,7 @@ import HelloPage from './components/HelloPage'
 import SubscribePage from './components/SubscribePage'
 import ThanksPage from './components/ThanksPage'
 import NotFoundPage from './components/NotFoundPage'
+import LoadingTestPage from './components/LoadingTestPage'
 import StackPage from './components/StackPage';
 import Anime from 'react-anime';
 import Hero from './components/ThemeSwitch';
@@ -113,6 +114,7 @@ ReactDOM.render(
             <Route path="/airdrop" component={CreateAirdrop} />
             <Route path="/stack" component={StackPage} />
             <Route path="/thanks" component={ThanksPage} />
+            <Route path="/loading" component={LoadingTestPage} />
             <Route path="/subscribe" component={SubscribePage} />
             <Route path="/post/:id" component={DetailPage} />
             <Route component={NotFoundPage} />

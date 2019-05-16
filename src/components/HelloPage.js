@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import Post from './Post'
 import { Query } from 'react-apollo'
 import  { gql } from 'apollo-boost'
-import Loading from './Loading'
+import LoadingAlt from './LoadingAlt'
 // import RewardPage from './RewardPage';
 // import subscribeStyle from '../constants/subscribeStyle';
 
@@ -49,9 +49,10 @@ export default function HelloPage() {
       return (
           <div>
             
-            {theme.primary === "black" ? <_Hero/> :
-            <Hero/>            
-            }            
+            {
+              theme.primary === "black" ? <_Hero/> :
+              <Hero/>            
+            }
             
             <div className="tc pv4 pv3-ns">            
               <div className="ttu tracked">

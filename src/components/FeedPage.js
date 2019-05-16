@@ -3,6 +3,7 @@ import Post from '../components/Post'
 import { Query } from 'react-apollo'
 import  { gql } from 'apollo-boost'
 import Loading from './Loading'
+import LoadingAlt from './LoadingAlt'
 
 export default class FeedPage extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class FeedPage extends Component {
             return (
               <div className="flex w-100 h-100 items-center justify-center pt7">
                 {/* <div>Loading ...</div>  */}
+                <LoadingAlt></LoadingAlt>
                 <Loading/>
               </div>
             )

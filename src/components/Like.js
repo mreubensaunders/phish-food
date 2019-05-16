@@ -9,8 +9,8 @@ export default class Like extends Component {
   constructor()
   {
     super();
-    let randomTestNum = Math.floor(Math.random() * (9 - 0 + 1)) + 0;
-    this.state = {count: randomTestNum, clicked: false};
+    // let randomTestNum = Math.floor(Math.random() * (9 - 0 + 1)) + 0;
+    this.state = {count: 0, clicked: false};
   }
 
   increaseCount() {    
