@@ -10,10 +10,12 @@ export default function LoadingTestPage(){
         console.log(count)
     })
 
-    return(
-        <div>
+    return(     
+        
+        <div className="flex w-100 h-100 items-center justify-center pt7">
             <LoadingAlt/>
             <Loading/>
-        </div>
+        </div>     
+        
     )
 }

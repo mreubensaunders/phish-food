@@ -120,6 +120,14 @@ body {
     }
   }
 
+  .rs-gradient{       
+      font-weight: 900;    
+      font-size: 14;
+      background: -webkit-linear-gradient($primary, black);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;    
+  }
+
   .rs-load{
     margin: 0;  
     position: fixed;  

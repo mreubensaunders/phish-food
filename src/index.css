@@ -128,6 +128,14 @@ body .cancel:hover {
   color: #ff80cc !important;
 }
 
+body .rs-gradient {
+  font-weight: 900;
+  font-size: 14;
+  background: -webkit-linear-gradient(#ff80cc, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 body .rs-load {
   margin: 0;
   position: fixed;
